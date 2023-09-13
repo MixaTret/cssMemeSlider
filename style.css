@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
     font-size: 20px;  
-    background-image: url(assets/1671521741.jpg); 
+    background-image: url(assets/wall.jpg); 
     background-position: center center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -20,8 +20,8 @@ body {
     max-width: 1200px;
     height: 600px;
     margin: 0 auto;  
-    overflow: hidden;  
-    border: 10px solid #fff;
+    overflow: hidden; 
+    /* border: 10px solid #fff; */
 }
 
 .middle {
@@ -33,15 +33,16 @@ body {
 
 .navigation {
     position: absolute;
-    bottom: 16px;
+    bottom: 0px;
     right: 0px;
     display: flex;
 }
 
 .dots {
-    width: 18px;
-    height: 18px;
-    margin: 10px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 12px;
     cursor: pointer;
     border-radius: 50%;
     transition: all .6s ease;
@@ -50,14 +51,30 @@ body {
 
 .dots:hover {
     opacity: 0.8;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
+
+.dots::after {
+    content: " ";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+}
+
+/* .dots:checked {
+    background: rgba(0, 0, 0, 0);
+    border: 5px solid #000000;
+} */
 
 input[name="picture"] {
     position: absolute;
     visibility: hidden;
 }
-
 
 .slides {
     display: flex;
@@ -73,6 +90,7 @@ input[name="picture"] {
 .slide img {
     width: 100%;
     height: 90%;
+    border-radius: 20px; 
 }
 
 #first:checked ~ .numb1 {
