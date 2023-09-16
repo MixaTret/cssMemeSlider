@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter', sans-serif; 
+    background-image: url(assets/wall.jpg); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+    background-color: #464646;
+}
+
+  
+.slider-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    width: 93%;
+    height: 41vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: end; 
+}
+
+img {
+    width: 100%;
+    margin-bottom: 3%;
+    border-radius: 1rem;
+}
+
+h2 {
+    font-size: 2vw;
+    color: #fff;
+}
+
+
+[id^=button] {
+    display: none;
+}
+
+[id^=button] + label{   
+    display: inline-block;
+    vertical-align: middle;
+    width: 2vw;
+    height: 2vw;
+    margin: 1vw;
+    border: 0.3vw solid #fff;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+    transition: all .8s ease;
+}
+
+p {
+    margin: -0.75vw;
+    padding: 1.5vw;
+}
+
+[id^=button] + label:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+[id^=button]:checked + label {    
+    background: transparent;
+    border: 0.3vw solid rgb(255, 255, 255);
+}
+
+[id^=button] + label ~ [id^=slider-content-] {
+    position: absolute;
+    top: 3vw;
+    left: 50%; 
+    text-align: start;
+    opacity: 0;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    transform: translate(-50%);
+
+}
+#button1:checked + label ~ #slider-content-1,
+#button2:checked + label ~ #slider-content-2,
+#button3:checked + label ~ #slider-content-3,
+#button4:checked + label ~ #slider-content-4 {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    top: 3vw;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+ @media (max-width: 31.25rem) {
+    .slider-wrapper {
+        justify-content: center;
+    }
+
+    img {
+        margin-bottom: 7%;
+    }
+}
+
