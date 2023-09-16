@@ -25,7 +25,7 @@ body {
     justify-content: flex-end;
     position: relative;
     width: 93%;
-    height: 38vw;
+    height: 41vw;
     margin-left: auto;
     margin-right: auto;
     text-align: end; 
@@ -33,7 +33,7 @@ body {
 
 img {
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     border-radius: 1rem;
 }
 
@@ -106,16 +106,13 @@ p {
     transform: translate(-50%);
 }
 
-/* @media (max-width: 1000px) {
-.hello_world {
-    width: 724px;
-    height: 495px;
-}
+ @media (max-width: 31.25rem) {
+    .slider-wrapper {
+        justify-content: center;
+    }
+
+    img {
+        margin-bottom: 7%;
+    }
 }
 
-@media (max-width: 1000px) {
-.hello_world {
-    width: 724px;
-    height: 495px;
-}
-} */
