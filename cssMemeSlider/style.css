@@ -55,14 +55,12 @@ h2 {
     margin: 1vw;
     border: 0.3vw solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: #ffffff;
     cursor: pointer;
     z-index: 10;
     opacity: 0.7;
     transition: all .8s ease;
 }
-
 
 p {
     margin: -0.75vw;
